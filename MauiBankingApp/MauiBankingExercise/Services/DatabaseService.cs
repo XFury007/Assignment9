@@ -27,5 +27,12 @@ namespace MauiBankingExercise.Services
            
             return _db.GetAllWithChildren<Account>(recursive: true);
         }
+        public List<Transaction> GetTransactionsByAccountId(int accountId)
+        {
+            return _db.Table<Transaction>()
+                      .Where(t => t.AccountId == accountId)
+                      .ToList();
+        }
+
     }
 }

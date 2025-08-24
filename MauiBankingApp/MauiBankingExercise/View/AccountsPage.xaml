@@ -4,7 +4,9 @@
              x:Class="MauiBankingExercise.Views.AccountsPage"
              Title="Accounts">
 
-    <CollectionView ItemsSource="{Binding Accounts}">
+    <CollectionView ItemsSource="{Binding Accounts}"
+                   SelectionMode="Single"
+                SelectionChanged="OnAccountSelected" >
         <CollectionView.ItemTemplate>
             <DataTemplate>
       
